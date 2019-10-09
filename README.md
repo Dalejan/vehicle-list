@@ -8,8 +8,8 @@ Antes de ejecutar cualquiera de los dos proyectos, correr `npm i` en cada carpet
 
 ### \* backend
 
-correr `npm run dev` para ejecutar en el puerto 3030
+Ingresar a la carpeta `backend` correr `npm run dev` para ejecutar en el puerto 3030
 
 ### \* frontend
 
-correr `ng serve` para ejecutar en el puerto 4200
+Ingresar a la carpeta `frontend` correr `ng serve` para ejecutar en el puerto 4200
