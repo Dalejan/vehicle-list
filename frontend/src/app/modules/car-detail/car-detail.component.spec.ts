@@ -17,11 +17,14 @@ import {
 } from "ng-lazyload-image";
 import { HttpClientModule } from "@angular/common/http";
 import { RouterModule } from "@angular/router";
+import { Vehicle } from "src/classes/vehicle";
 
 // *Pruebas
 describe("CarDetailComponent", () => {
   let component: CarDetailComponent;
   let fixture: ComponentFixture<CarDetailComponent>;
+  let nativeElement: HTMLElement;
+  let vehicle: Vehicle;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({

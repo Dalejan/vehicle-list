@@ -47,7 +47,6 @@ export class CarDetailComponent implements OnInit, OnDestroy {
     this.route.params
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe(params => (this.id = params["id"]));
-    console.log(this.id);
     this.fetchVehicle();
   }
 

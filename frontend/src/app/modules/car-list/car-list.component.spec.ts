@@ -25,6 +25,7 @@ import { StoreModule } from "@ngrx/store";
 import { EffectsModule } from "@ngrx/effects";
 import { filterEffects } from "src/app/ngrx/effects/filter.effects";
 import { appReducers } from "src/app/app.reducers";
+import { APP_BASE_HREF } from "@angular/common";
 
 // *Pruebas
 describe("CarListComponent", () => {
@@ -43,7 +44,8 @@ describe("CarListComponent", () => {
         }),
         StoreModule.forRoot(appReducers),
         EffectsModule.forRoot([filterEffects])
-      ]
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: "/" }]
     }).compileComponents();
   }));
 

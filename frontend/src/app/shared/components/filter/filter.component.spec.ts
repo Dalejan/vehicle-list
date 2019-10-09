@@ -13,18 +13,26 @@ import { FilterComponent } from "./filter.component";
 import { appReducers } from "src/app/app.reducers";
 import { EffectsModule } from "@ngrx/effects";
 import { filterEffects } from "src/app/ngrx/effects/filter.effects";
+import { StoreModule } from "@ngrx/store";
+import { Filter } from "src/classes/filter";
 
 // módulos
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { RouterTestingModule } from "@angular/router/testing";
-import { StoreModule } from "@ngrx/store";
-import { SaveFiltersAction } from "src/app/ngrx/actions/filter.actions";
+import { By } from "@angular/platform-browser";
 
 // *Pruebas
 describe("FilterComponent", () => {
   let component: FilterComponent;
   let fixture: ComponentFixture<FilterComponent>;
+  const testFilter: Filter = {
+    brand: "",
+    model: "",
+    color: "",
+    size: "",
+    ftype: [{ type: "", isSelected: false }]
+  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -46,17 +54,7 @@ describe("FilterComponent", () => {
     fixture.detectChanges();
   });
 
-  it("debería crear el componente", () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
-  });
-
-  it("debería hacer dispatch de SaveFiltersAction cuando se llame search()", () => {
-    const action = new SaveFiltersAction({
-      brand: "",
-      model: "",
-      color: "",
-      size: "",
-      ftype: [{ type: "", isSelected: false }]
-    });
   });
 });
