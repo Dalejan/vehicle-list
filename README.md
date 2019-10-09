@@ -1,5 +1,9 @@
 # Prueba técnica
 
+## Instalar dependencias
+
+Antes de ejecutar cualquiera de los dos proyectos, correr `npm i` en cada carpeta (frontend y backend)
+
 ## Para ejecutar (en desarrollo)
 
 ### \* backend
