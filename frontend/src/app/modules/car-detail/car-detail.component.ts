@@ -8,7 +8,7 @@ import { VehicleService } from "src/app/shared/services/vehicle.service";
 import { Vehicle } from "src/classes/vehicle";
 import { ActivatedRoute } from "@angular/router";
 import { Observable, Subject } from "rxjs";
-import { take, takeUntil } from "rxjs/operators";
+import { takeUntil } from "rxjs/operators";
 
 @Component({
   selector: "app-car-detail",

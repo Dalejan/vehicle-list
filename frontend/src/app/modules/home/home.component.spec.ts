@@ -23,7 +23,7 @@ import { RouterTestingModule } from "@angular/router/testing";
 // ngrx
 import { StoreModule } from "@ngrx/store";
 import { appReducers } from "src/app/app.reducers";
-import { filterEffects } from "src/app/ngrx/filter/filter.effects";
+import { filterEffects } from "src/app/ngrx/effects/filter.effects";
 import { EffectsModule } from "@ngrx/effects";
 
 // *Pruebas

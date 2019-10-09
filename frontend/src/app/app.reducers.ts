@@ -3,9 +3,7 @@
  * Contiene todos los reducers de la app centralizados para 'unirlos'
  */
 import { ActionReducerMap } from "@ngrx/store";
-
-import * as fromFilter from "./ngrx/filter/filter.reducer";
-import * as fromVehicles from "./ngrx/vehicles/vehicles.reducer";
+import * as reducers from "./ngrx/reducers";
 
 import { Filter } from "src/classes/filter";
 import { Vehicle } from "src/classes/vehicle";
@@ -16,6 +14,6 @@ export interface AppState {
 }
 
 export const appReducers: ActionReducerMap<AppState> = {
-  filters: fromFilter.filterReducer,
-  vehicles: fromVehicles.vehicleReducer
+  filters: reducers.filterReducer,
+  vehicles: reducers.vehicleReducer
 };

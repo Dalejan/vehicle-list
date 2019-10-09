@@ -2,7 +2,7 @@
  * filter.reducer
  * Encargado de actualizar el estado de los filtros para que estén disponibles en toda la app
  */
-import * as fromFilter from "./filter.actions";
+import * as fromFilter from "../actions/filter.actions";
 import { Filter } from "src/classes/filter";
 
 /**

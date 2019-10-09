@@ -9,7 +9,7 @@ import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { appReducers } from "./app.reducers";
 import { EffectsModule } from "@ngrx/effects";
-import { filterEffects } from "./ngrx/filter/filter.effects";
+import { efects } from "./ngrx/effects";
 
 import { environment } from "../environments/environment";
 
@@ -28,7 +28,7 @@ import { HttpClientModule } from "@angular/common/http";
       maxAge: 25, // Guarda los últimos 25 estados
       logOnly: environment.production // production log-only mode
     }),
-    EffectsModule.forRoot([filterEffects])
+    EffectsModule.forRoot(efects)
   ],
   providers: [VehicleService],
   bootstrap: [AppComponent]

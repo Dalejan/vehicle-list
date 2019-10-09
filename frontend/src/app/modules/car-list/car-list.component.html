@@ -10,6 +10,6 @@
 </div>
 
 <span *ngIf="errors || !vehicles.length">
-  <p>{{ errors?.error }}</p>
+  <p>{{ errors?.status ? errors?.error : "Revisa tu conexión" }}</p>
   <div class="nothing-found-img"></div>
 </span>

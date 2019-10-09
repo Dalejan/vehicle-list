@@ -10,7 +10,7 @@ import { AppComponent } from "./app.component";
 import { RouterModule } from "@angular/router";
 import { StoreModule } from "@ngrx/store";
 import { EffectsModule } from "@ngrx/effects";
-import { filterEffects } from "./ngrx/filter/filter.effects";
+import { filterEffects } from "./ngrx/effects/filter.effects";
 import { appReducers } from "./app.reducers";
 import { HttpClientModule } from "@angular/common/http";
 

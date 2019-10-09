@@ -2,7 +2,7 @@
  * vehicle-item.component
  * Componente que maneja la información y eventos de cada vehículo
  */
-import { Component, OnInit, Input, EventEmitter } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { Vehicle } from "src/classes/vehicle";
 import { Router } from "@angular/router";
 

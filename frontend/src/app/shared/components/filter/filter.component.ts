@@ -3,11 +3,8 @@
  * Componente encargado renderizar los filtros en distintas pantallas
  */
 import { Component, OnInit, Input } from "@angular/core";
-import { VehicleService } from "../../services/vehicle.service";
-import { Vehicle } from "src/classes/vehicle";
-import { Observable } from "rxjs";
 
-import { SaveFiltersAction } from "../../../ngrx/filter/filter.actions";
+import { actions } from "../../../ngrx/actions";
 import { Store } from "@ngrx/store";
 import { AppState } from "../../../app.reducers";
 import { Filter } from "src/classes/filter";
@@ -26,22 +23,22 @@ export class FilterComponent implements OnInit {
   /**
    * Variable que contiene las marcas de la db
    */
-  @Input("brands") public brands = ["BMW", "Chevrolet", "Susuki"];
+  public brands = ["BMW", "Chevrolet", "Susuki"];
 
   /**
    * Variable que contiene los modelos de la db
    */
-  @Input("models") public models = ["2000", "1999", "1505"];
+  public models = ["2000", "1999", "1505"];
 
   /**
    *  Variable que contiene los colores de la db
    */
-  @Input("colors") public colors = ["rojo", "café", "amarillo"];
+  public colors = ["Rojo", "Café", "Amarillo"];
 
   /**
    *  Variable que contiene los tamaños de la db
    */
-  @Input("sizes") public sizes = ["Normal", "Mediano", "Grande"];
+  public sizes = ["Normal", "Mediano", "Grande"];
 
   /**
    * Variable para mostrar más o menos filtros en mobile
@@ -61,7 +58,6 @@ export class FilterComponent implements OnInit {
   public selectedColor = "";
   public selectedSize = "";
 
-  public $vehicles: Observable<Vehicle[]>;
   constructor(private store: Store<AppState>) {
     this.store.subscribe(state => {
       if (state.filters) {
@@ -79,8 +75,9 @@ export class FilterComponent implements OnInit {
   toggleShowMoreFilters() {
     this.showMoreFilters = !this.showMoreFilters;
   }
+
   search() {
-    const action = new SaveFiltersAction(
+    const action = new actions.SaveFiltersAction(
       new Filter(
         this.selectedTypes,
         this.selectedModel,

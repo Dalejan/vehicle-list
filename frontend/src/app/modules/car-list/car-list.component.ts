@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { AppState } from "src/app/app.reducers";
 import { takeUntil } from "rxjs/operators";
-import { Subject, Observable } from "rxjs";
+import { Subject } from "rxjs";
 import { Vehicle } from "src/classes/vehicle";
 
 @Component({

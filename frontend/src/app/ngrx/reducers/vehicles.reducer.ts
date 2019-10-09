@@ -3,7 +3,7 @@
  * Encargado de actualizar el estado de los vehículos
  * (Solo a manera de demostración para futuro escalamiento)
  */
-import * as fromVehicles from "./vehicles.actions";
+import * as fromVehicles from "../actions/vehicles.actions";
 import { Vehicle } from "src/classes/vehicle";
 
 /**

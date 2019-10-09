@@ -51,6 +51,7 @@ export class VehicleService {
       )
       .pipe(
         map(a => {
+          console.log("gggg", a);
           return Object.values(a);
         })
       );
