@@ -1,0 +1,56 @@
+{
+  "1": {
+    "id": "1",
+    "size": "big",
+    "model": "2019",
+    "brand": "Mazda",
+    "color": "red",
+    "photo": "https://auteco.vteximg.com.br/arquivos/ids/160052-1000-1000/moto_advance_110_negro_azul_azul_2019_2.jpg?v=636747373594330000",
+    "type": "car"
+  },
+  "2": {
+    "id": "2",
+    "size": "small",
+    "model": "2019",
+    "brand": "Mazda",
+    "color": "red",
+    "photo": "https://auteco.vteximg.com.br/arquivos/ids/160052-1000-1000/moto_advance_110_negro_azul_azul_2019_2.jpg?v=636747373594330000",
+    "type": "car"
+  },
+  "3": {
+    "id": "3",
+    "size": "small",
+    "model": "2019",
+    "brand": "Mazda",
+    "color": "red",
+    "photo": "https://auteco.vteximg.com.br/arquivos/ids/160052-1000-1000/moto_advance_110_negro_azul_azul_2019_2.jpg?v=636747373594330000",
+    "type": "car"
+  },
+  "4": {
+    "id": "4",
+    "size": "small",
+    "model": "2019",
+    "brand": "Mazda",
+    "color": "red",
+    "photo": "https://auteco.vteximg.com.br/arquivos/ids/160052-1000-1000/moto_advance_110_negro_azul_azul_2019_2.jpg?v=636747373594330000",
+    "type": "car"
+  },
+  "5": {
+    "id": "5",
+    "size": "small",
+    "model": "2019",
+    "brand": "Mazda",
+    "color": "red",
+    "photo": "https://auteco.vteximg.com.br/arquivos/ids/160052-1000-1000/moto_advance_110_negro_azul_azul_2019_2.jpg?v=636747373594330000",
+    "type": "car"
+  },
+  "6": {
+    "id": "6",
+    "size": "small",
+    "model": "2019",
+    "brand": "Mazda",
+    "color": "red",
+    "photo": "https://auteco.vteximg.com.br/arquivos/ids/160052-1000-1000/moto_advance_110_negro_azul_azul_2019_2.jpg?v=636747373594330000",
+    "type": "car"
+  }
+}
