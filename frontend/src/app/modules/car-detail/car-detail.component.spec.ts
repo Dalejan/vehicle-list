@@ -18,6 +18,8 @@ import {
 import { HttpClientModule } from "@angular/common/http";
 import { RouterModule } from "@angular/router";
 import { Vehicle } from "src/classes/vehicle";
+import { VehicleService } from "src/app/shared/services/vehicle.service";
+import { take } from "rxjs/operators";
 
 // *Pruebas
 describe("CarDetailComponent", () => {

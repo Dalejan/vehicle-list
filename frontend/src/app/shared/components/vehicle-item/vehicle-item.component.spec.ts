@@ -4,7 +4,13 @@
  */
 
 // *Importación de los módulos y componentes necesarios para realizar las pruebas
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import {
+  async,
+  ComponentFixture,
+  TestBed,
+  inject,
+  fakeAsync
+} from "@angular/core/testing";
 
 // componentes
 import { VehicleItemComponent } from "./vehicle-item.component";
@@ -15,11 +21,15 @@ import {
   LazyLoadImageModule
 } from "ng-lazyload-image";
 import { RouterTestingModule } from "@angular/router/testing";
+import { Router } from "@angular/router";
 
 // *Pruebas
 describe("VehicleItemComponent", () => {
   let component: VehicleItemComponent;
   let fixture: ComponentFixture<VehicleItemComponent>;
+  let mockRouter = {
+    navigate: jasmine.createSpy("navigate")
+  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -30,7 +40,7 @@ describe("VehicleItemComponent", () => {
           preset: intersectionObserverPreset // <-- tell LazyLoadImage that you want to use IntersectionObserver
         })
       ],
-      providers: []
+      providers: [{ provide: Router, useValue: mockRouter }]
     }).compileComponents();
   }));
 
@@ -42,5 +52,14 @@ describe("VehicleItemComponent", () => {
 
   it("should create", () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should call Router.navigate("detail/:id") with the ID of the item', () => {
+    component.onClick();
+
+    expect(mockRouter.navigate).toHaveBeenCalledWith(
+      [`/detail/${component.id}`],
+      { skipLocationChange: true }
+    );
   });
 });

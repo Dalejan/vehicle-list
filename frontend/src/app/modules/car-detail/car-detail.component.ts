@@ -6,7 +6,7 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { VehicleService } from "src/app/shared/services/vehicle.service";
 import { Vehicle } from "src/classes/vehicle";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router, NavigationEnd } from "@angular/router";
 import { Observable, Subject } from "rxjs";
 import { takeUntil } from "rxjs/operators";
 
@@ -29,7 +29,7 @@ export class CarDetailComponent implements OnInit, OnDestroy {
   /**
    * Variable que tiene el id obtenido de la ruta
    */
-  private id: string;
+  public id: string;
 
   /**
    * unsubscribe$
@@ -44,10 +44,10 @@ export class CarDetailComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.fetchRecommendations();
-    this.route.params
-      .pipe(takeUntil(this.unsubscribe$))
-      .subscribe(params => (this.id = params["id"]));
-    this.fetchVehicle();
+    this.route.params.pipe(takeUntil(this.unsubscribe$)).subscribe(params => {
+      this.id = params["id"];
+      this.fetchVehicle();
+    });
   }
 
   fetchVehicle() {

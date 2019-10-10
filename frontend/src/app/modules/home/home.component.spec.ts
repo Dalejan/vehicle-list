@@ -25,6 +25,8 @@ import { StoreModule } from "@ngrx/store";
 import { appReducers } from "src/app/app.reducers";
 import { filterEffects } from "src/app/ngrx/effects/filter.effects";
 import { EffectsModule } from "@ngrx/effects";
+import { Router } from "@angular/router";
+import { VehicleService } from "src/app/shared/services/vehicle.service";
 
 // *Pruebas
 describe("HomeComponent", () => {

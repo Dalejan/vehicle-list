@@ -13,19 +13,22 @@ import { Router } from "@angular/router";
 })
 export class VehicleItemComponent implements OnInit {
   /**
-   * name: vehicle
-   * Type: Vehicle
+
    * Variable que maneja la información de cada vehículo
    */
-  @Input("vehicle") vehicle: Vehicle;
+  @Input("vehicle") public vehicle: Vehicle;
 
+  /**
+   * Variable que maneja el id del vehículo (creada solo para testing)
+   */
+  public id: string;
   constructor(private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.id = this.vehicle ? this.vehicle.id : "1"; // para realizar testing
+  }
 
   onClick() {
-    this.router
-      .navigateByUrl("/", { skipLocationChange: true })
-      .then(() => this.router.navigate([`/detail/${this.vehicle.id}`]));
+    this.router.navigateByUrl(`/detail/${this.id}`);
   }
 }
