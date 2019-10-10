@@ -43,7 +43,7 @@ module.exports = server => {
             v.type === filters.type.split("_")[2]
           : true) &&
         (filters.brand ? v.brand === filters.brand : true) &&
-        // (filters.size ? v.size === filters.size : true) &&
+        (filters.size ? v.size === filters.size : true) &&
         (filters.color ? v.color === filters.color : true) &&
         (filters.model ? v.model === filters.model : true)
       );
