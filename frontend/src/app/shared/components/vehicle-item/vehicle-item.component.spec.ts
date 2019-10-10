@@ -28,7 +28,7 @@ describe("VehicleItemComponent", () => {
   let component: VehicleItemComponent;
   let fixture: ComponentFixture<VehicleItemComponent>;
   let mockRouter = {
-    navigate: jasmine.createSpy("navigate")
+    navigateByUrl: jasmine.createSpy("navigateByUrl")
   };
 
   beforeEach(async(() => {
@@ -57,9 +57,8 @@ describe("VehicleItemComponent", () => {
   it('should call Router.navigate("detail/:id") with the ID of the item', () => {
     component.onClick();
 
-    expect(mockRouter.navigate).toHaveBeenCalledWith(
-      [`/detail/${component.id}`],
-      { skipLocationChange: true }
+    expect(mockRouter.navigateByUrl).toHaveBeenCalledWith(
+      `/detail/${component.id}`
     );
   });
 });
